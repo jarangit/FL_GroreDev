@@ -13,6 +13,7 @@ const acceptButtonTheme = createTheme({
     info: {
       main: "#606060",
     },
+   
   },
 });
 

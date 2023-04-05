@@ -4,8 +4,8 @@ import MainLayout from '../../components/layouts/main_layout'
 
 export default function HomePage() {
   return (
-    <MainLayout>
-      <p>aosjdkamsd</p>
-    </MainLayout>
+    <div>
+      <p>Home page</p>
+    </div>
   )
 }

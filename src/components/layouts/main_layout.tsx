@@ -2,14 +2,25 @@ import Header from "@/components/templates/header";
 import React from "react";
 
 export default function MainLayout({
-    children,
-  }: {
-    children: React.ReactNode;
-  }) {
+  children,
+}: {
+  children: JSX.Element;
+}) {
+  console.log(children?.type?.layout);
   return (
-    <div >
-      <Header />
-      {children}
-    </div>
+    <>
+      {children.type?.layout === "login" ? (
+        <div>
+          {children}
+        </div>
+      ) : (
+        <div >
+          <Header />
+          <div className={`p-[2%]`}>
+            {children}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
