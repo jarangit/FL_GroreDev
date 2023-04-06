@@ -14,9 +14,9 @@ export default function MainLayout({
           {children}
         </div>
       ) : (
-        <div >
+        <div className=" mb-10">
           <Header />
-          <div className={`p-[2%]`}>
+          <div className={``}>
             {children}
           </div>
         </div>
