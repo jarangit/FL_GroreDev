@@ -1,13 +1,21 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 import AddBoxRoundedIcon from '@mui/icons-material/AddBoxRounded';
 import IndeterminateCheckBoxRoundedIcon from '@mui/icons-material/IndeterminateCheckBoxRounded';
 type Props = {
-  data: any
+  data: any;
+  mode?: string;
 }
 
-const OrderItem = ({ data }: Props) => {
+const OrderItem = ({ data, mode }: Props) => {
+  const [count, setCount] = useState(0)
+  useEffect(() => {
+    if (data) {
+      setCount(data.qty)
+    }
+  }, [data])
+
   return (
     <div className='flex justify-between items-center py-3 border-b border-background'>
       <div className='flex gap-3 items-center'>
@@ -33,18 +41,20 @@ const OrderItem = ({ data }: Props) => {
       </div>
       <div className='flex gap-3 items-center'>
         <div className='flex gap-1 items-center'>
-          <div className='text-background'>
-            <IndeterminateCheckBoxRoundedIcon/>
+          <div className='text-background cursor-pointer' onClick={() => count > 0 && setCount(count - 1)}>
+            <IndeterminateCheckBoxRoundedIcon />
           </div>
-          <div>{data.qty}</div>
-          <div className='text-background'>
+          <div>{count}</div>
+          <div className='text-background cursor-pointer' onClick={() => setCount(count + 1)}>
             <AddBoxRoundedIcon />
           </div>
         </div>
         <div>EA</div>
-        <div className={`text-[#f45353]`}>
-          <DeleteRoundedIcon />
-        </div>
+        {mode !== "view" ? (
+          <div className={`text-[#f45353]`}>
+            <DeleteRoundedIcon />
+          </div>
+        ) : ""}
       </div>
     </div>
   )

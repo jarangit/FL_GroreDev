@@ -13,9 +13,14 @@ const acceptButtonTheme = createTheme({
     info: {
       main: "#606060",
     },
-   
-   
+
+
   },
+  typography: {
+    fontFamily: [
+      '"Prompt"', " sans-serif"
+    ].join(',')
+  }
 });
 
-export {acceptButtonTheme}
+export { acceptButtonTheme }

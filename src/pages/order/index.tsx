@@ -1,7 +1,7 @@
 import OrderItem from '@/components/featurePage/order/orderItem'
 import React from 'react'
 
-const mockDataOrderList = [
+export const mockDataOrderList = [
   {
     id: 1,
     name: "Gavan",

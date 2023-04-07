@@ -44,17 +44,17 @@ const ProfilePage = (props: Props) => {
 
           </div>
           <div className='col-span-2 text-center'>
-            <button className={`bg-yellow text-blue p-2 px-3 rounded-xl font-bold text-xl`}>แก้ไขโปรไฟล์</button>
+            <button className={`bg-yellow text-blue p-2 px-3 rounded-xl  text-xl`}>แก้ไขโปรไฟล์</button>
           </div>
           <div className='col-span-4'>
-            <button className={`bg-yellow text-blue p-2 px-3 rounded-xl font-bold text-xl`}>แก้ไขโปรไฟล์</button>
+            <button className={`bg-yellow text-blue p-2 px-3 rounded-xl  text-xl`}>แก้ไขโปรไฟล์</button>
           </div>
           <div className='col-span-5'>
             <textarea className='border rounded-xl w-full p-3' placeholder='รายละอียด' rows={10} />
           </div>
           <div className='col-span-1'>
             <div className='w-full h-full flex justify-center items-end pb-3'>
-              <button className={`bg-orange text-white p-2 px-6 rounded-xl font-bold text-xl`}>ออกจากระบบ</button>
+              <button className={`bg-orange text-white p-2 px-6 rounded-xl  text-xl`}>ออกจากระบบ</button>
             </div>
           </div>
         </div>
