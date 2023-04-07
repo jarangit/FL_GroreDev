@@ -56,9 +56,13 @@ const ComponentPage = (props: Props) => {
         <div className='bg-white rounded-lg p-3'>
           {mockDataOrderList.map((item: any, key) => (
             <div key={key}>
-              <OrderItem data={item} mode = {"view"} />
+              <OrderItem data={item} mode={"view"} />
             </div>
           ))}
+        </div>
+        <div className='flex gap-6 w-full justify-end mt-6'>
+          <button className={`bg-yellow text-blue p-2 px-3 rounded-xl  text-xl min-w-[200px] drop-shadow-md`}>เพิ่มรายการ</button>
+          <button className={`bg-green text-white p-2 px-3 rounded-xl  text-xl min-w-[200px] drop-shadow-md`}>สร้างแบบฟอร์ม</button>
         </div>
       </div>
     </div>
