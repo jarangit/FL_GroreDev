@@ -96,7 +96,7 @@ const OrderPage = (props: Props) => {
               <div>9 EA</div>
             </div>
             <div className='text-center'>
-              <button className={`bg-orange text-white p-2 px-3 rounded-md`}>พิมพ์ใบเบิกพัสดุ</button>
+              <button className={`bg-orange text-white p-2 px-3 rounded-xl`}>พิมพ์ใบเบิกพัสดุ</button>
             </div>
           </div>
         </div>
