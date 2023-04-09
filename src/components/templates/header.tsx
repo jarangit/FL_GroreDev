@@ -14,6 +14,7 @@ import Image from "next/image";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import SearchIcon from '@mui/icons-material/Search';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { useRouter } from "next/router";
 type Props = {
   width?: number | string;
   height?: number | string;
@@ -28,11 +29,12 @@ type Props = {
 };
 
 const Header: React.FC<Props> = (props) => {
+  const route = useRouter()
   return (
     <Box component="header" className="flex flex-col">
       <Box className="flex justify-between px-8  bg-blue w-full h-[100px] items-center">
         <Logo className="" />
-        <div className="relative w-14 h-14 rounded-full overflow-hidden">
+        <div className="relative w-14 h-14 rounded-full overflow-hidden cursor-pointer" onClick={() => route.push("/profile")}>
           <Image
             src={"/assets/avatar.jpg"}
             fill
